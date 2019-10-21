@@ -58,7 +58,7 @@ is_cocaine_points_system<-function(df)
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|red flag|windows
   |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients'
   
-  not_cocaine_name_list_1<-"(bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed
+  not_cocaine_name_list_1<-"( bills |opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed
   |amphetamin|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
   |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
   |cracking|generator|how the White trade took over the World|handbook|password
@@ -71,17 +71,17 @@ is_cocaine_points_system<-function(df)
   |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip
   |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
-  |ingest|protection|eztest|forensic|athome|fp3|mda-white|28gmda
+  |protection|eztest|forensic|athome|fp3|mda-white|28gmda
   |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice
   |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned
-  |mdpv|gig|hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
-  |passport|identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
-  |hcg|pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
+  |mdpv| gig |hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
+  | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
+  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|
-  |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
+  |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
   not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download)"
 
