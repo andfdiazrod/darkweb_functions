@@ -58,18 +58,18 @@ is_cocaine_points_system<-function(df)
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|red flag|windows
   |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients'
   
-  not_cocaine_name_list_1<-"(bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
+  not_cocaine_name_list_1<-"(bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed
   |amphetamin|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
   |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
-  |cracking|generator|cocainenation:howtheWhitetradetookovertheWorld|handbook|password
-  |poker|adobe|thestraightfacts|extendedversion|redcocaine|willdamageyourlife
-  |howthewhitetrade|hacker|netflix|instructions|wifi|hacker|wep|howto|crystallization
+  |cracking|generator|how the White trade took over the World|handbook|password
+  |poker|adobe|the straight facts|extended version|redcocaine|willdamageyourlife
+  |howthewhitetrade|hacker|netflix|instructions|wifi|hacker|wep|crystallization
   |cultivation|synthesis|methamphetamine|lighter|colastash|stashcan|synthesis
   |teaching|connect|pdf|cannabis|chocolate|dream|wax|paralysis|cookies
   |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|keylogger
   |nitrous|ketamine|blacktar|tincture|d-isomer|bathslats|lsd|GBL|MDPV
   |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip
-  |hippycrack|poker|accountcrack|fenixfp3|desktop|smtp|synthacaine|synthetic
+  |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
   |ingest|protection|eztest|forensic|athome|fp3|mda-white|28gmda
   |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice
@@ -77,11 +77,11 @@ is_cocaine_points_system<-function(df)
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned
   |mdpv|gig|hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
-  |passport|id|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
+  |passport|identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
   |hcg|pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|
-  |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol|tea|tee|te|lottery|how to make)"
+  |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
   not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download)"
 
@@ -96,8 +96,8 @@ is_cocaine_points_system<-function(df)
   
   
   df<-df %>% mutate(cocaine=is_cocaine_name_list1+ is_cocaine_name_list2+is_cocaine_description_name_list_1+is_cocaine_description_name_list_2, 
-                            not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list) %>% 
-    filter(cocaine>=4 & not_cocaine<=2)
+                            not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list)
+   
   
   
   
