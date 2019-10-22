@@ -96,7 +96,8 @@ is_cocaine_points_system<-function(df)
   
   
   df<-df %>% mutate(cocaine=is_cocaine_name_list1+ is_cocaine_name_list2+is_cocaine_description_name_list_1+is_cocaine_description_name_list_2, 
-                            not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list)
+                            not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list) %>% 
+    filter(cocaine>=4 & not_cocaine<=2)
    
   
   
