@@ -18,17 +18,17 @@ is_cocaine_points_system<-function(df)
   |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip"
   #Detecting if the listing is cocaine, given a list of names 
   is_cocaine_name_list1<-3*as.numeric(grepl(cocaine_name_list_1,df$listing_low))
-  print(sum(ifelse(is_cocaine_name_list1==TRUE, 1,0)))
+  
   
   is_cocaine_name_list2<-1.5*as.numeric(grepl(cocaine_name_list_2,df$listing_low))
-  print(sum(ifelse(is_cocaine_name_list2==TRUE, 1,0)))
+  
   
   #Detecting if the description of the listing belongs to a cocaine element, given a list of names 
   is_cocaine_description_name_list_1<-2*as.numeric(grepl(cocaine_name_list_1,df$description_low))
-  print(sum(ifelse(is_cocaine_description_name_list_1==T,1,0)))
+ 
   
   is_cocaine_description_name_list_2<-grepl(cocaine_name_list_2,df$description_low)
-  print(sum(ifelse(is_cocaine_description_name_list_2==T,1,0)))
+ 
   
 
   # NotCocaine --------------------------------------------------------------
