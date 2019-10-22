@@ -47,6 +47,7 @@ for(dir in as.character(daily_dirs)){
     
     dir_output <- 'dark_web_andres/agora_evolution'
     if(!file %in% list.files(dir_output)){
+      
       write.csv(df,paste0(dir_output,'/', file), 
                 row.names=FALSE)
     } else {

@@ -12,6 +12,7 @@ for(dir_f in list.files('github/darwkeb_function/functions',pattern='.R',full.na
   source(dir_f)
 }
 setwd("C:/Users/jj.ovalle/OneDrive - Universidad de los andes")
+
 daily_dirs <- suppressWarnings(na.omit(as.numeric(list.dirs('Darkweb/grams',full.names = FALSE,recursive = FALSE))))
 
 for(dir in as.character(daily_dirs)){
@@ -22,7 +23,9 @@ for(dir in as.character(daily_dirs)){
   for(file in agora_or_evol){
     
     file_name_temp <- substr(file,1,(nchar(file)-4))
-    df_orig <- read.csv(paste0('Darkweb/grams/',dir,'/',file),stringsAsFactors=FALSE)
+    file_route<-paste0('Darkweb/grams/',dir,'/',file)
+    
+    df_orig <- read.csv(file_route,stringsAsFactors=FALSE)
     
     df_orig$listing_low <- tolower(df_orig$name)
     df_orig$description_low <- tolower(df_orig$description)
@@ -41,20 +44,24 @@ for(dir in as.character(daily_dirs)){
       df[(nrow(df)+1):(nrow(df_crack)+nrow(df)),colnames(df_crack)] <- df_crack
       df <- df[-1,]
     }
-    df <- find_weight(df)
+    df <- find_weight(df_cocaine)
     df <- purity_extractor(df)
       
     df$day <- dir
     
-    setwd("C:/Users/jj.ovalle/Desktop/DARKWEB JJ")
-    
-    dir_output <- 'Nuevas_bases/agora_evolution'
+    dir_output <- 'Darkweb/Nuevas_bases/agora_evolution'
+    list.files(dir_output)
     if(!file %in% list.files(dir_output)){
+      print("llego?")
       write.csv(df,paste0(dir_output,'/', file), 
                 row.names=FALSE)
-    } else {
+    }
+    
+    else {
       write.table(df,paste0(dir_output,'/', file),append=TRUE,
                   row.names=FALSE, col.names=FALSE,sep=',')
     }
   }
 }
+
+write.csv(df, file = "/prueba.csv")
