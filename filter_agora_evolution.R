@@ -4,7 +4,7 @@ library(haven)
 library(stringr)
 library(dplyr)
 
-setwd('C:/Users/andfd/OneDrive - Universidad de los andes')
+setwd(choose.dir())
 
 
 for(dir_f in list.files('dark_Web_andres/darkweb_functions/functions',pattern='.R',full.names=1)){
