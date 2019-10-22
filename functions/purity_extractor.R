@@ -57,13 +57,13 @@ purity_extractor<-function(df)
     }
    if( !(is.na(pure[i])| is.na(df$weight[i]))& (pure[i]==df$weight[i]))
      {
-       temp_purity_desc_back<-str_extract(str_remove(df$description_low[i], pattern = df$weight[i]), 
+       temp_purity_desc_back<-str_extract(str_remove(df$description_low[i], pattern = as.character(df$weight[i])), 
                      pattern = "[0-9][0-9](?=[purity|quality|PURITY|QUALITY|pure|grade]{8})")
-       temp_purity_desc_foward<-str_extract(str_remove(df$description_low[i], pattern = df$weight[i]), 
+       temp_purity_desc_foward<-str_extract(str_remove(df$description_low[i], pattern = as.character(df$weight[i])), 
                                                      pattern = "(?<=[purity|quality|pure|grade]{5})[0-9][0-9]" )
-       temp_purity_listing_back<-str_extract(str_remove(df$listing_low[i], pattern = df$weight[i]), 
+       temp_purity_listing_back<-str_extract(str_remove(df$listing_low[i], pattern = as.character(df$weight[i])), 
                                              pattern = "[0-9][0-9](?=.[[Pp]urity|[Qq]uality|PURITY|QUALITY|[Pp]ure|grade]{8})" )
-       temp_purity_listing_foward<-str_extract(str_remove(df$listing_low[i], pattern = df$weight[i]), 
+       temp_purity_listing_foward<-str_extract(str_remove(df$listing_low[i], pattern = as.character(df$weight[i])), 
                                               pattern =  "(?<=[[Pp]urity|[Qq]uality|PURITY|QUALITY|[Pp]ure|grade]{5})[0-9][0-9]" )
        
        pure[i]<-temp_purity_desc_back
