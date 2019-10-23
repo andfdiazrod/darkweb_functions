@@ -4,14 +4,13 @@ library(haven)
 library(stringr)
 library(dplyr)
 
-setwd("C:/Users/jj.ovalle/Desktop/DARKWEB JJ")
+setwd("C:/Users/andfd/OneDrive - Universidad de los andes")
 
 
-for(dir_f in list.files('github/darwkeb_function/functions',pattern='.R',full.names=1)){
+for(dir_f in list.files('dark_web_andres/darkweb_functions/functions',pattern='.R',full.names=1)){
   print(dir_f)
   source(dir_f)
 }
-setwd("C:/Users/jj.ovalle/OneDrive - Universidad de los andes")
 
 daily_dirs <- suppressWarnings(na.omit(as.numeric(list.dirs('Darkweb/grams',full.names = FALSE,recursive = FALSE))))
 
@@ -31,7 +30,7 @@ for(dir in as.character(daily_dirs)){
     df_orig$description_low <- tolower(df_orig$description)
     
     df_cocaine <- is_cocaine_points_system(df_orig)
-    df_crack <- is_crack_points_system(df_orig)
+    df_crack <- is_crack(df_orig)
     colnames_cocaine_crack <- union(colnames(df_cocaine),colnames(df_crack))
     
     df <- data.frame(matrix(ncol=length(colnames_cocaine_crack)))
@@ -44,12 +43,13 @@ for(dir in as.character(daily_dirs)){
       df[(nrow(df)+1):(nrow(df_crack)+nrow(df)),colnames(df_crack)] <- df_crack
       df <- df[-1,]
     }
-    df <- find_weight(df_cocaine)
-    df <- purity_extractor(df)
+    
+    #df <- find_weight(df_cocaine)
+    #df <- purity_extractor(df)
       
     df$day <- dir
     
-    dir_output <- 'Darkweb/Nuevas_bases/agora_evolution'
+    dir_output <- 'dark_web_andres/agora_evolution'
     list.files(dir_output)
     if(!file %in% list.files(dir_output)){
       print("llego?")
