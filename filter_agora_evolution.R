@@ -4,7 +4,7 @@ library(haven)
 library(stringr)
 library(dplyr)
 
-setwd(choose.dir())
+setwd('C:/Users/andfd/OneDrive - Universidad de los andes/')
 
 
 for(dir_f in list.files('dark_Web_andres/darkweb_functions/functions',pattern='.R',full.names=1)){
@@ -27,7 +27,7 @@ for(dir in as.character(daily_dirs)){
     df_orig$description_low <- tolower(df_orig$description)
     
     df_cocaine <- is_cocaine_points_system(df_orig)
-    df_crack <- is_crack_points_system(df_orig)
+    df_crack <- is_crack(df_orig)
     colnames_cocaine_crack <- union(colnames(df_cocaine),colnames(df_crack))
     
     df <- data.frame(matrix(ncol=length(colnames_cocaine_crack)))
