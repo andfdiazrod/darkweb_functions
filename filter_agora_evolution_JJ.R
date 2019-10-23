@@ -31,7 +31,7 @@ for(dir in as.character(daily_dirs)){
     df_orig$description_low <- tolower(df_orig$description)
     
     df_cocaine <- is_cocaine_points_system(df_orig)
-    df_crack <- is_crack_points_system(df_orig)
+    df_crack <- is_crack(df_orig)
     colnames_cocaine_crack <- union(colnames(df_cocaine),colnames(df_crack))
     
     df <- data.frame(matrix(ncol=length(colnames_cocaine_crack)))
@@ -44,8 +44,8 @@ for(dir in as.character(daily_dirs)){
       df[(nrow(df)+1):(nrow(df_crack)+nrow(df)),colnames(df_crack)] <- df_crack
       df <- df[-1,]
     }
-    df <- find_weight(df_cocaine)
-    df <- purity_extractor(df)
+    #df <- find_weight(df)
+    #df <- purity_extractor(df)
       
     df$day <- dir
     
