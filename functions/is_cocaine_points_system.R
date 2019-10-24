@@ -1,3 +1,4 @@
+
 is_cocaine_points_system<-function(df)
 {
   
@@ -25,12 +26,12 @@ is_cocaine_points_system<-function(df)
   
   #Detecting if the description of the listing belongs to a cocaine element, given a list of names 
   is_cocaine_description_name_list_1<-2*as.numeric(grepl(cocaine_name_list_1,df$description_low))
- 
+  
   
   is_cocaine_description_name_list_2<-grepl(cocaine_name_list_2,df$description_low)
- 
   
-
+  
+  
   # NotCocaine --------------------------------------------------------------
   
   not_cocaine<-'bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed
@@ -83,22 +84,42 @@ is_cocaine_points_system<-function(df)
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|kjljhkjf
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
-  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download|tutorail)"
-
+  
+  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download)"
+  
   
   not_cocaine_listing_name_list1<-3*as.numeric(grepl(not_cocaine_name_list_1, df$listing_low))
   
   not_cocaine_description_list<-as.numeric(grepl(not_cocaine_name_list_description, df$description_low))
-
+  
+  
+  # Drug Combos -------------------------------------------------------------
+  
+  other_drugs<-"valium|mda|weed|mdpv|mdma|meth|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
+|marijuana|ritalin|gbl|hydrocodone|mdma"
+  
+  df$other_drugs<-grepl(other_drugs, df$listing_low)
+  
+  
+  
+  
+  
   # 
   # 
   # DataFrame Construction --------------------------------------------------
   
   
   df<-df %>% mutate(cocaine=is_cocaine_name_list1+ is_cocaine_name_list2+is_cocaine_description_name_list_1+is_cocaine_description_name_list_2, 
-                            not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list) %>% 
-    filter(cocaine>=4 & not_cocaine<=2)
-   
+                    not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list) 
+  
+  df<-df %>% mutate(combos=cocaine+as.numeric(other_drugs)) 
+  df$combos<-ifelse(df$combos>df$cocaine & df$combos>4, 1,0)
+  
+  df_cocaine<-df %>% filter(cocaine>=4 & not_cocaine<2)
+  df_combos<-df %>% filter(combos==1)
+  
+  df<-rbind(df_cocaine, df_combos)
+  
   
   
   
@@ -109,4 +130,7 @@ is_cocaine_points_system<-function(df)
   
   
 }
+
+
+
 
