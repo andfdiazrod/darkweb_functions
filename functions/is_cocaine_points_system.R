@@ -63,7 +63,7 @@ is_cocaine_points_system<-function(df)
   |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
   |cracking|generator|how the White trade took over the World|handbook|password
   |poker|adobe|the straight facts|extended version|redcocaine|willdamageyourlife
-  |howthewhitetrade|hacker|netflix|instructions|wifi|hacker|wep|crystallization
+  |howthewhitetrade|hacker|netflix|instructions|wifi|hacker| wep |crystallization
   |cultivation|synthesis|methamphetamine|lighter|colastash|stashcan|synthesis
   |teaching|connect|pdf|cannabis|chocolate|dream|wax|paralysis|cookies
   |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|keylogger
@@ -80,10 +80,10 @@ is_cocaine_points_system<-function(df)
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
   | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
-  |explosives|tutorial|decline|casinos|3dsiso|triple combination|
+  |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
-  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download)"
+  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download|tutorail)"
 
   
   not_cocaine_listing_name_list1<-3*as.numeric(grepl(not_cocaine_name_list_1, df$listing_low))
