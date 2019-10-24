@@ -46,5 +46,6 @@ not_crack_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital do
     mutate(not_crack_name=3*as.numeric(grepl(not_crack, name_listing_low)))%>%
     mutate(not_crack_description=as.numeric(grepl(not_crack_name_list_description, d_listing_low)))
   
+  
 }
 
