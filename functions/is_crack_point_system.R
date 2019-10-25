@@ -28,7 +28,7 @@ not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|crack
               |hcg|pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
               |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
               |explosives|tutorial|decline|casinos|3dsiso|triple combination|
-                |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol|tea|tee|te|lottery|how to make)"
+                |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|purple crack|bluecrack|blue crack|greencrack|fake cocaine|fakecocaine|clenbuterol|tea|tee|te|lottery|how to make)"
 
 not_crack_name_list_description<-"(green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
 
