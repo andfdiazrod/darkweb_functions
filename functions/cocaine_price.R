@@ -1,7 +1,7 @@
 cocaine_price <- function(df){
   df$price_in_bit <- as.numeric(df$price) / as.numeric(df$weight_in_grams)
   
-  bitcoin_price <- read.csv('funciones/precio_bitcoin.csv')
+  bitcoin_price <- read.csv('darkweb_functions/functions/precio_bitcoin.csv')
   dates <- c()
   for(d in bitcoin_price$Date){
     date_temp <- strsplit(as.character(d),'-')[[1]]
@@ -13,9 +13,9 @@ cocaine_price <- function(df){
   df$price_in_dollar <- NA
   
   c_ = 0
-  for(d in unique(df$fecha)){
+  for(d in unique(df$day)){
     c_ = c_ + 1
-    df[which(df$fecha==d),'price_in_dollar'] <- df[which(df$fecha==d),'price_in_bit'] * bitcoin_price$Close[which(bitcoin_price$dates==d)]
+    df[which(df$day==d),'price_in_dollar'] <- df[which(df$day==d),'price_in_bit'] * bitcoin_price$Close[which(bitcoin_price$dates==d)]
   }
   return(df)
 }
