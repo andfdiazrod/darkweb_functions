@@ -25,7 +25,7 @@ join_days=function(dates,path,website){
         assign(paste(website,i,sep = "_"), read_csv(paste(website,'csv',sep = ".")))
       },
       error = function(e){
-        message("* Caught an error on itertion ", i)
+        message("* Date not available ", i)
         print(e)
       }
     )
@@ -41,7 +41,7 @@ join_days=function(dates,path,website){
         to_rbind[[s]] <-d
       },
       error = function(e){
-        message("* Caught an error on itertion ", i)
+        message("* Date not available ", i)
         print(e)
       }
     )
