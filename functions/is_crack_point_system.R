@@ -5,23 +5,23 @@ crack_name_list_1<-"crack|crac|crak|krak|krack|riss"
 crack_name_list_2<-"rock|base|ball|rocks|nugget|grit| hail|dice|sleet|chemical|tornado|24-7|crumbs|ice cube|sleet"
 
   #Looking for not crack
-not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|cracker|Product Key NOT a crack|clarissa|buds|RSA 4096|green crack|candy|bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
-                |amphetamin|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
-              |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
-              |cracking|generator|cocainenation:howtheWhitetradetookovertheWorld|handbook|password
-              |poker|adobe|thestraightfacts|extendedversion|redcocaine|willdamageyourlife
-              |howthewhitetrade|hacker|netflix|instructions|wifi|hacker|wep|howto|crystallization
+not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|cracker|product key not a crack|clarissa|buds|rsa 4096|green crack|candy|bills|opioid|opiate withdrawls|strawberry cough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
+                |amphetamin|prepaid card|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
+              |guide|custom listing for jacobs crackers|reviews|cracked|a brief history of
+              |cracking|generator|cocaine nation:how the white trade took over the World|handbook|password
+              |poker|adobe|the straight facts|extended version|red cocaine|will damage your life
+              |how the white trade|hacker|netflix|instructions|wifi|hacker|wep|how to|howto|crystallization
               |cultivation|synthesis|methamphetamine|lighter|colastash|stashcan|synthesis
               |teaching|connect|pdf|cannabis|chocolate|dream|wax|paralysis|cookies
-              |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|keylogger
+              |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|key logger|keylogger|
               |nitrous|ketamine|blacktar|tincture|d-isomer|bathslats|lsd|GBL|MDPV
-              |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip
-              |hippycrack|poker|accountcrack|fenixfp3|desktop|smtp|synthacaine|synthetic
-              |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
+              |ecstacy|GHB|the complete cultivation and syntes is of|maskmyip|mask my ip|
+              |hippycrack|hippy crack|poker|accountcrack|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
+              |the coke machine|pipe|twitter|wi-fi|want to know who|nitrousoxide|butyrolactone|seed
               |ingest|protection|eztest|forensic|athome|fp3|mda-white|28gmda
               |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice
-              |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
-              |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
+              |coca cola pills|cocacola pills|cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
+              |8 ball ofice|8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|testosterone
               |gold|ritalin|nation|psychosis|resident card|gold|Gold|tsb|login|cloned
               |mdpv|gig|hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
               |passport|id|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
