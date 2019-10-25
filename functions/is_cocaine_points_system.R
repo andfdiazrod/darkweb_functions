@@ -11,12 +11,12 @@ is_cocaine_points_system<-function(df)
   df$listing_low<-gsub("[\r\n]","",df$listing_low)
   #a. Create a variable indicating everything that can be cocaine
   
-  cocaine_name_list_1<-"coke|flake|snow|blow|whitepowder|coca|caine|coco|perico|
+  cocaine_name_list_1<-"coke|flake|snow|blow|whitepowder|coca|caine|perico|
   |nose candy|baseball|cocaine|cocain|coke|coka|koka|koks|fishscale|kokain|flakes|kokain|coca|
- |kokaiina|cokaine|8ball"
+ |kokaiina|cokaine"
   
   cocaine_name_list_2<-"charlie|bump|big c|caine|coco|c-game|c game|marching powder|toot|base|basa|dust|big rush|pearl|
-  |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip"
+  |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip|8ball|coco"
   #Detecting if the listing is cocaine, given a list of names 
   is_cocaine_name_list1<-3*as.numeric(grepl(cocaine_name_list_1,df$listing_low))
   
@@ -81,7 +81,7 @@ is_cocaine_points_system<-function(df)
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
   | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
-  |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|kjljhkjf
+  |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
   
@@ -98,9 +98,13 @@ is_cocaine_points_system<-function(df)
   other_drugs<-"valium|mda|weed|mdpv|mdma|meth|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
 |marijuana|ritalin|gbl|hydrocodone|mdma"
   
-  df$other_drugs<-grepl(other_drugs, df$listing_low)
+  other_drugs<-grepl(other_drugs, df$listing_low)
   
+
+# Sample ------------------------------------------------------------------
   
+  sample_list<-" sample| free sample|trial"
+  sample<-grepl(sample_list, df$listing_low)  
   
   
   
@@ -114,7 +118,7 @@ is_cocaine_points_system<-function(df)
   
   df<-df %>% mutate(combos=cocaine+as.numeric(other_drugs)) 
   df$combos<-ifelse(df$combos>df$cocaine & df$combos>4, 1,0)
-  
+  df$sample<-sample
   df_cocaine<-df %>% filter(cocaine>=4 & not_cocaine<2)
   df_combos<-df %>% filter(combos==1)
   
