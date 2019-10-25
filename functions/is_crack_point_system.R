@@ -5,7 +5,7 @@ crack_name_list_1<-"crack|crac|crak|krak|krack|riss"
 crack_name_list_2<-"rock|base|ball|rocks|nugget|grit| hail|dice|sleet|chemical|tornado|24-7|crumbs|ice cube|sleet"
 
   #Looking for not crack
-not_crack<-"(Product Key NOT a crack|clarissa|buds|RSA 4096|green crack|candy|bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
+not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|cracker|Product Key NOT a crack|clarissa|buds|RSA 4096|green crack|candy|bills|opioid|opiatewithdrawls|strawberrycough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
                 |amphetamin|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
               |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
               |cracking|generator|cocainenation:howtheWhitetradetookovertheWorld|handbook|password
@@ -30,7 +30,7 @@ not_crack<-"(Product Key NOT a crack|clarissa|buds|RSA 4096|green crack|candy|bi
               |explosives|tutorial|decline|casinos|3dsiso|triple combination|
                 |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol|tea|tee|te|lottery|how to make)"
 
-not_crack_name_list_description<-"(book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
+not_crack_name_list_description<-"(green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
 
 
   #Function
