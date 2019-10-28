@@ -11,12 +11,12 @@ is_cocaine_points_system<-function(df)
   df$listing_low<-gsub("[\r\n]","",df$listing_low)
   #a. Create a variable indicating everything that can be cocaine
   
-  cocaine_name_list_1<-"coke|flake|snow|blow|whitepowder|coca|caine|perico|
+  cocaine_name_list_1<-"coke|flake|snow|whitepowder|coca|perico|
   |nose candy|baseball|cocaine|cocain|coke|coka|koka|koks|fishscale|kokain|flakes|kokain|coca|
  |kokaiina|cokaine"
   
   cocaine_name_list_2<-"charlie|bump|big c|caine|coco|c-game|c game|marching powder|toot|base|basa|dust|big rush|pearl|
-  |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip|8ball|coco"
+  |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip|8ball|coco|blow"
   #Detecting if the listing is cocaine, given a list of names 
   is_cocaine_name_list1<-3*as.numeric(grepl(cocaine_name_list_1,df$listing_low))
   
@@ -79,7 +79,7 @@ is_cocaine_points_system<-function(df)
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned
   |mdpv| gig |hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
-  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone
+  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
