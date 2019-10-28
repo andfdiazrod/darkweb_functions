@@ -73,7 +73,7 @@ is_cocaine_points_system<-function(df)
   |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
   |protection|eztest|forensic|athome|fp3|mda-white|28gmda|fenethylline
-  |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice
+  |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice|how make 
   |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned
@@ -95,7 +95,7 @@ is_cocaine_points_system<-function(df)
   
   # Drug Combos -------------------------------------------------------------
   
-  other_drugs<-"valium|mda|weed|mdpv|mdma|meth|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
+  other_drugs<-"valium|mda|weed|mdpv|mdma|meth |methamphetamin|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
 |marijuana|ritalin|gbl|hydrocodone|mdma"
   
   tutorial<-grepl("tutorial",df$listing_low)
