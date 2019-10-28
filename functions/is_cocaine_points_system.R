@@ -16,7 +16,7 @@ is_cocaine_points_system<-function(df)
  |kokaiina|cokaine"
   
   cocaine_name_list_2<-"charlie|bump|big c|caine|coco|c-game|c game|marching powder|toot|base|basa|dust|big rush|pearl|
-  |candy|cola|big flakes|baseball|bump|line|rail|stash|yeyo|discoshit|flake|flakes|zip|8ball|coco|blow"
+  |candy|cola|big flakes|baseball|bump| line |rail|stash|yeyo|discoshit|flake|flakes|zip|8ball|coco|blow"
   #Detecting if the listing is cocaine, given a list of names 
   is_cocaine_name_list1<-3*as.numeric(grepl(cocaine_name_list_1,df$listing_low))
   
@@ -72,7 +72,7 @@ is_cocaine_points_system<-function(df)
   |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip
   |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
-  |protection|eztest|forensic|athome|fp3|mda-white|28gmda
+  |protection|eztest|forensic|athome|fp3|mda-white|28gmda|fenethylline
   |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice
   |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
@@ -81,7 +81,7 @@ is_cocaine_points_system<-function(df)
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
   | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
-  |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil
+  |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil|seed|captagon
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
   
@@ -125,9 +125,6 @@ is_cocaine_points_system<-function(df)
   df_combos<-df %>% filter(combos==1)
   
   df<-rbind(df_cocaine, df_combos)
-  
-  
-  
   
   
   return(df)
