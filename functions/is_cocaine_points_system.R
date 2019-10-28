@@ -98,7 +98,7 @@ is_cocaine_points_system<-function(df)
   other_drugs<-"valium|mda|weed|mdpv|mdma|meth |methamphetamin|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
 |marijuana|ritalin|gbl|hydrocodone|mdma"
   
-  tutorial<-grepl("tutorial|aprendien|snowden",df$listing_low)
+  tutorial<-grepl("tutorial|aprendien|snowden|sourcing guide",df$listing_low)
   
   other_drugs<-grepl(other_drugs, df$listing_low)
   
