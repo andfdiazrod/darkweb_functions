@@ -69,7 +69,7 @@ is_cocaine_points_system<-function(df)
   |teaching|connect|pdf|cannabis|chocolate|dream|wax|paralysis|cookies
   |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|keylogger
   |nitrous|ketamine|blacktar|tincture|d-isomer|bathslats|lsd|GBL|MDPV
-  |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip
+  |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip|dimethocaine
   |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
   |protection|eztest|forensic|athome|fp3|mda-white|28gmda|fenethylline
@@ -105,7 +105,7 @@ is_cocaine_points_system<-function(df)
 
 # Sample ------------------------------------------------------------------
   
-  sample_list<-" sample| free sample|trial|sampler"
+  sample_list<-" sample|free sample|trial|sampler"
   sample<-grepl(sample_list, df$listing_low)  
   
   
