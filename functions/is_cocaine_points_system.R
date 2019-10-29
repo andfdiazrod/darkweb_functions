@@ -76,7 +76,7 @@ is_cocaine_points_system<-function(df)
   |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice|how make 
   |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
-  |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned
+  |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned|anonymous identity|	otto snow
   |mdpv| gig |hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
   | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden
