@@ -105,7 +105,7 @@ is_cocaine_points_system<-function(df)
 
 # Sample ------------------------------------------------------------------
   
-  sample_list<-" sample| free sample|trial"
+  sample_list<-" sample| free sample|trial|sampler"
   sample<-grepl(sample_list, df$listing_low)  
   
   
