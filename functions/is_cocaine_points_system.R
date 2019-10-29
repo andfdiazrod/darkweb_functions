@@ -79,7 +79,7 @@ is_cocaine_points_system<-function(df)
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned|anonymous identity|otto snow
   |mdpv| gig |hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
-  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden
+  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden|no place to hide|test for
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil|seed|captagon
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
@@ -98,7 +98,7 @@ is_cocaine_points_system<-function(df)
   other_drugs<-"valium|mda|weed|mdpv|mdma|meth |methamphetamin|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
 |marijuana|ritalin|gbl|hydrocodone|mdma"
   
-  tutorial<-grepl("tutorial|aprendien|snowden|sourcing guide|how to grow|car stash|how make|fe test",df$listing_low)
+  tutorial<-grepl("tutorial|aprendien|snowden|sourcing guide|how to grow|car stash|how make|fe test|coca md",df$listing_low)
   
   other_drugs<-grepl(other_drugs, df$listing_low)
   
