@@ -119,7 +119,7 @@ is_cocaine_points_system<-function(df)
                     not_cocaine= not_cocaine_listing_name_list1+not_cocaine_description_list) 
   
   df<-df %>% mutate(combos=cocaine+as.numeric(other_drugs)) 
-  df$combos<-ifelse(df$combos>df$cocaine & df$combos>4 & tutorial==0, 1,0)
+  df$combos<-ifelse(df$combos>df$cocaine & df$combos>5 & tutorial==0, 1,0)
   df$sample<-sample
   df_cocaine<-df %>% filter(cocaine>=4 & not_cocaine<2)
   df_combos<-df %>% filter(combos==1)
