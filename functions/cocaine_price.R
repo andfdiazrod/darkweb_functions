@@ -1,7 +1,7 @@
 cocaine_price <- function(df){
   df$price_in_bit <- as.numeric(df$price) / as.numeric(df$weight_in_grams)
   
-  bitcoin_price <- read.csv('darkweb_functions/functions/precio_bitcoin.csv')
+  bitcoin_price <- read.csv(file = 'functions/precio_bitcoin.csv')
   dates <- c()
   for(d in bitcoin_price$Date){
     date_temp <- strsplit(as.character(d),'-')[[1]]
@@ -19,3 +19,5 @@ cocaine_price <- function(df){
   }
   return(df)
 }
+
+
