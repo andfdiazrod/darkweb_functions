@@ -12,7 +12,7 @@ is_cocaine_points_system<-function(df)
   #a. Create a variable indicating everything that can be cocaine
   
   cocaine_name_list_1<-"coke|flake|snow|whitepowder|coca|perico|
-  |nose candy|baseball|cocaine|cocain|coke|coka|koka|koks|fishscale|kokain|flakes|kokain|coca|
+  |nose candy|baseball|cocaine|cocain|coke|coka|koka|koks|fishscale|kokain|flakes|kokain|
  |kokaiina|cokaine"
   
   cocaine_name_list_2<-"charlie|bump|big c|caine|coco|c-game|c game|marching powder|toot|base|basa|dust|big rush|pearl|
@@ -64,7 +64,7 @@ is_cocaine_points_system<-function(df)
   |guide|customlistingforjacobscrackers|reviews|cracked|a brief history of
   |cracking|generator|how the White trade took over the World|handbook|password
   |poker|adobe|the straight facts|extended version|redcocaine|willdamageyourlife
-  |howthewhitetrade|hacker|netflix|instructions|wifi|hacker| wep |crystallization
+  |howthewhitetrade|hacker|netflix|instructions|otto snow|wifi|hacker| wep |crystallization
   |cultivation|synthesis|methamphetamine|lighter|colastash|stashcan|synthesis
   |teaching|connect|pdf|cannabis|chocolate|dream|wax|paralysis|cookies
   |mda|mephedrone|opium|fentanyl|methadone|desoxyn|greencrack|scanner|keylogger
@@ -72,20 +72,20 @@ is_cocaine_points_system<-function(df)
   |ecstacy|GHB|thecompletecultivationandsyntesisof|maskmyip|dimethocaine
   |hippycrack|poker|account crack|fenixfp3|desktop|smtp|synthacaine|synthetic
   |thecokemachine|pipe|twitter|wi-fi|wanttoknowwho|nitrousoxide|butyrolactone|seed
-  |protection|eztest|forensic|athome|fp3|mda-white|28gmda|fenethylline
+  |protection|eztest|forensic|athome|fp3|mda-white|28gmda|fenethylline|coca cola stash
   |premiumaccount|ez-test|recipe|puretar|blacktar|nugrun|ofice|how make 
   |cocacolapills|ketmin|mxeh|mdpvhcl|puretar|uncuttar|90%h#3|chinawhite|kush|facebook|testosterone
   |8ballofice|gunpowder|patches|mdpv|flubromazepam|diplomas|diploma|book|books|weed|marijuana|Testosterone
   |gold|ritalin|nation|psychosis|resident card|crack|gold|Gold|tsb|login|cloned|anonymous identity|otto snow
   |mdpv| gig |hardsales|amex|mcsc|dmt|cvv|black widow|silver bar|moneypak|steroids|roids|hydroxybutyrate|shamanism|erection|gbl|statement
   | passport |identification|pharmacy|mda|oxycodone|miffy|bots|salbutamol|cunningulus|carding|kamagra|boldenone|trenbolone|turinabol|clenbuterol
-  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden|no place to hide|test for
+  | hcg |pregnyl|nandrolone|socks|proxy|mxe|amphetamine|modafinil|coca cola stash can|hydrocodone|tutorial|snowden|no place to hide|test for|not cocaine
   |chocolata|cc|duloxetine|slump buster|cotton candy|benzocaine|diazepam|stash can|mushroom|ballzinator|sildenafil|metabolism|secret stash
   |explosives|tutorial|decline|casinos|3dsiso|triple combination|history|wash| test | smuggling|valium|coconut oil|seed|captagon
   |rolling paper|nude photos|boobs|rescue|com db |uk db |forums|nutrients|purplecrack|bluecrack|greencrack|fakecocaine|clenbuterol| tea | tee |lottery|how to make|car safe stash|syntethic cocaine)"
   
   
-  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download)"
+  not_cocaine_name_list_description<-"(tutorial|porn|valid cc|clenbuterol|digital download|download|collection)"
   
   
   not_cocaine_listing_name_list1<-3*as.numeric(grepl(not_cocaine_name_list_1, df$listing_low))
@@ -98,7 +98,7 @@ is_cocaine_points_system<-function(df)
   other_drugs<-"valium|mda|weed|mdpv|mdma|meth |methamphetamin|amphetamin|heroin|cannabis|fentanyl|lsd|acid|MDPV|ecstacy|flubromazepam
 |marijuana|ritalin|gbl|hydrocodone|mdma"
   
-  tutorial<-grepl("tutorial|aprendien|snowden|sourcing guide|how to grow|car stash|how make|fe test|coca md",df$listing_low)
+  tutorial<-grepl("tutorial|aprendien|snowden|sourcing guide|how to grow|car stash|how make|fe test|coca md|coca cola stash",df$listing_low)
   
   other_drugs<-grepl(other_drugs, df$listing_low)
   
