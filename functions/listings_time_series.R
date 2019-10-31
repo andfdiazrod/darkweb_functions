@@ -6,14 +6,14 @@ listings_time_series<-function(df)
   
   for (vendor in unique(df_1$vendor_name)) {
     df_1_temp<-df %>% filter(vendor_name==vendor)
-      for (listing in unique(df_1_temp$listing_low)) {
-        temp <- df %>% filter(listing_low==listing) %>% select(day,listing_low, price_in_bit, price_in_dollar, purity, Country, ship_from, uncut)
-        list_cocaine[[a]]<-temp
-        a<-a+1
-        
-      }
+    for (listing in unique(df_1_temp$listing_low)) {
+      temp <- df %>% filter(listing_low==listing) %>% select(day,listing_low, price_in_bit, price_in_dollar, purity, Country, ship_from, uncut)
+      list_cocaine[[a]]<-temp
+      a<-a+1
+      
+    }
   }
- 
+  
   
   list_crack<-list()
   a<-1
