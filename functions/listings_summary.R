@@ -1,25 +1,21 @@
-listings_time_series<-function(df)
+listings_summary<-function(df)
 {
-  list_cocaine<-list()
-  a<-1
-  df_1<-df %>% filter(cocaine>=4 & not_cocaine<=1 & combos==0 & sample==F)
-  for (listing in unique(df_1$listing_low)) {
-    temp <- df %>% filter(listing_low==listing) %>% select(day,listing_low, price_in_bit, price_in_dollar)
-    list_cocaine[[a]]<-temp
-    a<-a+1
-    
-  }
+  cocaine_listings_sum<-df %>% filter(cocaine>=4 & not_cocaine<=1 & combos==0 & sample==F) %>% 
+    group_by(listing_low) %>% summarise(min_price=min(na.omit(price_in_bit)), max_price=max(na.omit(price_in_bit)),
+                                        peso=mean(na.omit(weight_in_grams)), mean_price=mean(na.omit(price_in_bit)),
+                                        median_price=median(na.omit(price_in_bit)), var_price=var(na.omit(price_in_bit)),
+                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day), max_day=max(day))
   
-  list_crack<-list()
-  a<-1
-  df_1<-df %>% filter(is_crack>=4 & not_crack<=1)
-  for (listing in unique(df_1$listing_low)) {
-    temp <- df %>% filter(listing_low==listing) %>% select(day,listing_low, price_in_bit, price_in_dollar)
-    list_crack[[a]]<-temp
-    a<-a+1
-    
-  }
   
-  return(list(list_cocaine, list_crack))
+  crack_listings_sum<-df %>% filter(is_crack>=4 & not_crack<=1) %>% 
+    group_by(listing_low) %>% summarise(min_price=min(na.omit(price_in_bit)), max_price=max(na.omit(price_in_bit)),
+                                        peso=mean(na.omit(weight_in_grams)), mean_price=mean(na.omit(price_in_bit)),
+                                        median_price=median(na.omit(price_in_bit)), var_price=var(na.omit(price_in_bit)),
+                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day), max_day=max(day))
+  
+  return(list(cocaine_listings_sum, crack_listings_sum))
+  
 }
 
+
+a<-listings_summary(agora)
