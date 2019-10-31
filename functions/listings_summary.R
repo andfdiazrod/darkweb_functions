@@ -4,7 +4,7 @@ listings_summary<-function(df)
     group_by(vendor_name,listing_low) %>% summarise(min_price=min(na.omit(price_in_bit)), max_price=max(na.omit(price_in_bit)),
                                         peso=mean(na.omit(weight_in_grams)), mean_price=mean(na.omit(price_in_bit)),
                                         median_price=median(na.omit(price_in_bit)), var_price=var(na.omit(price_in_bit)),
-                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day), max_day=max(day), n_days=length(unique(day)),
+                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day_format), max_day=max(day_format), n_days=length(unique(day)),
                                         country=unique(Country)[1], purity=mean(na.omit(purity)))
   
   
@@ -12,7 +12,7 @@ listings_summary<-function(df)
     group_by(vendor_name,listing_low) %>% summarise(min_price=min(na.omit(price_in_bit)), max_price=max(na.omit(price_in_bit)),
                                         peso=mean(na.omit(weight_in_grams)), mean_price=mean(na.omit(price_in_bit)),
                                         median_price=median(na.omit(price_in_bit)), var_price=var(na.omit(price_in_bit)),
-                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day), max_day=max(day), n_days=length(unique(day)),
+                                        sd_price=sd(na.omit(price_in_bit)), n=length(price_in_bit), min_day=min(day_format), max_day=max(day_format), n_days=length(unique(day)),
                                         country=unique(Country)[1], purity=mean(na.omit(purity)))
   
   return(list(cocaine_listings_sum, crack_listings_sum))
