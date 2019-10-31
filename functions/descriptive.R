@@ -1,7 +1,4 @@
-library(dplyr)
-library(ggplot2)
-
-descriptive_as_list=function(df){
+descriptive=function(df, pag=pag){
 
 cocained=df%>%
   filter(cocaine>=0 & not_cocaine<=1 & sample==F & combos==0)%>%
@@ -9,25 +6,25 @@ cocained=df%>%
   summarize(pg_mean=mean(price_in_bit, na.rm = T),pg_median=median(price_in_bit, na.rm = T),totalq=sum(weight_in_grams,na.rm = T),howmanyvendors=length(unique(vendor_name)))
 
 crackd=df%>%
-  filter(is_crack>=0 & not_crack<=1 & sample==F)%>% #&  & combos==0
+  filter(is_crack>=0 & not_crack<=1 & sample==F)%>% 
   group_by(day_format)%>%
   summarize(pg_mean=mean(price_in_bit, na.rm = T),pg_median=median(price_in_bit, na.rm = T),totalq=sum(weight_in_grams,na.rm = T),howmanyvendors=length(unique(vendor_name)))
 
-pgmeanvsday_cocaine=ggplot(cocained, aes(x=day_format, y=pg_mean)) + geom_line() + xlab('Dia') + ylab ('Precio por gramo promedio') + theme(axis.text.x = element_text(angle = 90))
-pgmedianvsday_cocaine=ggplot(cocained, aes(x=day_format, y=pg_median)) + geom_line() + xlab('Dia') + ylab ('Precio por gramo mediana') + theme(axis.text.x = element_text(angle = 90))
-totalqvsday_cocaine=ggplot(cocained, aes(x=day_format, y=totalq)) + geom_line() + xlab('Dia') + ylab ('Cantidad vendida') + theme(axis.text.x = element_text(angle = 90))
-vendorsvsday_cocaine=ggplot(cocained, aes(x=day_format, y=howmanyvendors)) + geom_line() + xlab('Dia') + ylab ('Numero de vendedores') + theme(axis.text.x = element_text(angle = 90))
+pgmeanvsday_cocaine=ggplot(cocained, aes(x=day_format, y=pg_mean)) + geom_line() + xlab('Day') + ylab ('Mean Price per gram / Cocaine') + theme(axis.text.x = element_text(angle = 90)) + ggtitle(substring(pag,1,nchar(pag)-4))
+pgmedianvsday_cocaine=ggplot(cocained, aes(x=day_format, y=pg_median)) + geom_line() + xlab('Day') + ylab ('Median Price per gram / Cocaine') + theme(axis.text.x = element_text(angle = 90))
+totalqvsday_cocaine=ggplot(cocained, aes(x=day_format, y=totalq)) + geom_line() + xlab('Day') + ylab ('Quantity Offered / Cocaine') + theme(axis.text.x = element_text(angle = 90))
+vendorsvsday_cocaine=ggplot(cocained, aes(x=day_format, y=howmanyvendors)) + geom_line() + xlab('Day') + ylab ('Number of Vendors / Cocaine') + theme(axis.text.x = element_text(angle = 90))
 
-pgmeanvsday_crack=ggplot(crackd, aes(x=day_format, y=pg_mean)) + geom_line() + xlab('Dia') + ylab ('Precio por gramo promedio') + theme(axis.text.x = element_text(angle = 90))
-pgmedianvsday_crack=ggplot(crackd, aes(x=day_format, y=pg_median)) + geom_line() + xlab('Dia') + ylab ('Precio por gramo mediana') + theme(axis.text.x = element_text(angle = 90))
-totalqvsday_crack=ggplot(crackd, aes(x=day_format, y=totalq)) + geom_line() + xlab('Dia') + ylab ('Cantidad vendida') + theme(axis.text.x = element_text(angle = 90))
-vendorsvsday_crack=ggplot(crackd, aes(x=day_format, y=howmanyvendors)) + geom_line() + xlab('Dia') + ylab ('Numero de vendedores') + theme(axis.text.x = element_text(angle = 90))
+pgmeanvsday_crack=ggplot(crackd, aes(x=day_format, y=pg_mean)) + geom_line() + xlab('Day') + ylab ('Mean Price per gram / Crack') + theme(axis.text.x = element_text(angle = 90))
+pgmedianvsday_crack=ggplot(crackd, aes(x=day_format, y=pg_median)) + geom_line() + xlab('Day') + ylab ('Median Price per gram / Crack') + theme(axis.text.x = element_text(angle = 90))
+totalqvsday_crack=ggplot(crackd, aes(x=day_format, y=totalq)) + geom_line() + xlab('Day') + ylab ('Quantity Offered / Crack') + theme(axis.text.x = element_text(angle = 90))
+vendorsvsday_crack=ggplot(crackd, aes(x=day_format, y=howmanyvendors)) + geom_line() + xlab('Day') + ylab ('Number of Vendors / Crack') + theme(axis.text.x = element_text(angle = 90))
 
 
-descriptive<<-list(cocained,crackd,pgmeanvsday_cocaine,pgmedianvsday_cocaine,totalqvsday_cocaine,vendorsvsday_cocaine,
+descriptive<-list(cocained,crackd,pgmeanvsday_cocaine,pgmedianvsday_cocaine,totalqvsday_cocaine,vendorsvsday_cocaine,
                  pgmeanvsday_crack,pgmedianvsday_crack,totalqvsday_crack,vendorsvsday_crack)
 
-#return(descriptive)
+return(descriptive)
 
 }
 
