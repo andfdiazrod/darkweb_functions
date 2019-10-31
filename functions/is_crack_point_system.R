@@ -32,6 +32,8 @@ not_crack<-"(3 5g 8ball columbian fishscale uncut cocaine|a half ball or 1 75 gr
 
 not_crack_name_list_description<-"(this is top of the line product meant for picky users or crack freebase cookers|the quality of freebase is higher than crack|crack base gl gg... this is the shit..|green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
 
+#Looking for sample
+sample_list<-" sample|free sample|trial|sampler"
 
   #Function
 df=df %>%
@@ -48,6 +50,7 @@ df=df %>%
   mutate(is_crack=is_crack_name_list1+is_crack_name_list2+is_crack_description_list1+is_crack_description_list2)%>%
   mutate(not_crack=not_crack_name+not_crack_description)%>%
   filter(is_crack>=4 & not_crack<2)%>%
+  mutate(sample=grepl(sample_list, name_listing_low))%>%
   select(-c(is_crack_name_list1, is_crack_name_list2, is_crack_description_list1, is_crack_description_list2, not_crack_name, not_crack_description))
 
 }
