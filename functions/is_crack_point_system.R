@@ -33,7 +33,7 @@ not_crack<-"(3 5g 8ball columbian fishscale uncut cocaine|a half ball or 1 75 gr
 not_crack_name_list_description<-"(this is top of the line product meant for picky users or crack freebase cookers|the quality of freebase is higher than crack|crack base gl gg... this is the shit..|green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
 
 #Looking for sample
-sample_list<-" sample|free sample|trial"
+sample_list<-" sample|free sample|trial|sampler"
 
   #Function
 df=df %>%
