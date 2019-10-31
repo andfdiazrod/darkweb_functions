@@ -35,7 +35,7 @@ weight_from_string_list <- function(string_list){
       unit <- str_extract(str, weight_words_sorted)
       position_unit_cut <- str_locate(str,unit)
       if(!is.na(unit)){
-        pattern <- paste0("(\\d+)\\s*",unit)  
+        pattern <- paste0("([0-9\\.]+)\\s*",unit)  
         match   <- regexec(pattern, str)
         adjacent_words <- unlist(regmatches(str, match))[-1]
         weight <- na.omit(suppressWarnings(as.numeric(adjacent_words)))
