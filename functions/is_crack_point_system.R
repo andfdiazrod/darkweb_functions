@@ -5,7 +5,7 @@ crack_name_list_1<-"crack|crac|crak|krak|krack|riss"
 crack_name_list_2<-"rock|base|ball|rocks|nugget|grit| hail|dice|sleet|chemical|tornado|24-7|crumbs|ice cube|sleet"
 
   #Looking for not crack
-not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|cracker|product key not a crack|clarissa|buds|rsa 4096|green crack|candy|bills|opioid|opiate withdrawls|strawberry cough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
+not_crack<-"(3 5g 8ball columbian fishscale uncut cocaine|a half ball or 1 75 grams of australia s best damn fucking|waitrose|the millionaire fastlane crack the code to wealth|the julian special kraken and coke mix|driver genius professional 11 final crack|mapb hcl|give us the ballot the modern struggle for voting rights|debt or democracy public money for sustainability|crack99 the takedown of a 100 million dollar chinese so|conejo crack house|microsoft office 2016 professional plus 16 0 x86x64|how turn cocaine into a freebase form|xanor lappuja|piping crunch with aircrack ng|niche marketing|fl studio|google crack search|ebay hackcracktip|hacked user databases info collection|custom for|mapb hcl|budder crack|abbyy finereader 12 best ocr with crack|alien spy rat 5 0 with plugin no crack|hashcat rules blandy toxic ninja rockyou megatron|krissy top shelf|photoshop cs 6 crack by big boss|winzip pro version 19 crack x86 x32 serial|nero burning rom 2014 v15 0 05300 ml incl crack key at|lemon crack|daemon tools pro advanced with crack|blackshades 5 5 1 crack with sql database|avira antivirus pro 2015 serial code and crack|abbyy finereader 12 with crack|custom listing|pure power crack vap juce|windows|craked|geen|aafcrack|megakrakken|password|crissy moon|cracker|product key not a crack|clarissa|buds|rsa 4096|green crack|candy|bills|opioid|opiate withdrawls|strawberry cough|mdma|e-vape|makerskit|leaves|meth|pipes|speed|
                 |amphetamin|prepaid card|prepaidcard|bth|heroin|neurontin|acetone|install|withdraw|tutorial
               |guide|custom listing for jacobs crackers|reviews|cracked|a brief history of
               |cracking|generator|cocaine nation:how the white trade took over the World|handbook|password
@@ -30,7 +30,7 @@ not_crack<-"(windows|craked|geen|aafcrack|megakrakken|password|crissy moon|crack
               |explosives|tutorial|decline|casinos|3dsiso|triple combination|
                 |rolling paper|nude photos|boobs|rescue|com db|uk db|forums|nutrients|purplecrack|purple crack|bluecrack|blue crack|greencrack|fake cocaine|fakecocaine|clenbuterol|tea|tee|te|lottery|how to make)"
 
-not_crack_name_list_description<-"(green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
+not_crack_name_list_description<-"(this is top of the line product meant for picky users or crack freebase cookers|the quality of freebase is higher than crack|crack base gl gg... this is the shit..|green|password|book|tutorial|porn|valid cc|clenbuterol|digital download|download)" 
 
 #Looking for sample
 sample_list<-" sample|free sample|trial"
