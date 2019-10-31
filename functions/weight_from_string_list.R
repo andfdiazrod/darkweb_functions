@@ -16,6 +16,7 @@ weight_from_string_list <- function(string_list){
     str <- sub('full','1',str)
     str <- sub('deux','2',str)
     str <- sub('1 one','1',str)
+    str <- sub('1 single','1',str)
     
     replace_1 <- '[0-9]+\\s+[0-9]+'
     find_replace <- strsplit(str_extract_all(str,replace_1)[[1]],' ')
@@ -34,7 +35,7 @@ weight_from_string_list <- function(string_list){
       unit <- str_extract(str, weight_words_sorted)
       position_unit_cut <- str_locate(str,unit)
       if(!is.na(unit)){
-        pattern <- paste0("(\\S+)\\s*",unit)  
+        pattern <- paste0("(\\d+)\\s*",unit)  
         match   <- regexec(pattern, str)
         adjacent_words <- unlist(regmatches(str, match))[-1]
         weight <- na.omit(suppressWarnings(as.numeric(adjacent_words)))
