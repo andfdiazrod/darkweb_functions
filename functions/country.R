@@ -11,9 +11,9 @@ country<-function(df){
                           yes =country_description,
                           no =country_name ))%>%
     select(-c(country_name,country_description,name_listing_low,d_listing_low))%>%
-    mutate(Country= gsub('col[ou]+mbian?','Colombia',Country))%>% #Aca se cambian los nombres de los paises encontrados
-    mutate(Country= gsub('bolivian?','Bolivia',Country))%>%
-    mutate(Country= gsub('peru','Peru',Country))
+    mutate(country= gsub('col[ou]+mbian?','Colombia',country))%>% #Aca se cambian los nombres de los paises encontrados
+    mutate(country= gsub('bolivian?','Bolivia',country))%>%
+    mutate(country= gsub('peru','Peru',country))
   }
 #Puede que se necesite añadir paises.
 
