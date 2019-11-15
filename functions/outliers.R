@@ -1,3 +1,4 @@
+if(FALSE){
 x=read.csv('C:/Users/Juan Jose/Dropbox/Deepweb/salidas_1_11/listing_summary_df_cocaine.csv')
 
 outliers=x%>%
@@ -7,3 +8,4 @@ outliers=x%>%
   mutate(maxfilterA=ifelse(test= maxfilter==1 & min_price<2,yes = 'A',no = 'B' ))
 
 View(outliers)
+}
