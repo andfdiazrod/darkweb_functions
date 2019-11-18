@@ -1,4 +1,4 @@
-  find_weight <- function(df){
+find_weight <- function(df){
   weight_grams <- weight_from_string_list(df$listing_low) 
   weight_grams$weight_description <- 0
   if(length(which(is.na(weight_grams$unit))) > 0){

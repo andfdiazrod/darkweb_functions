@@ -1,7 +1,7 @@
 weight_from_string_list <- function(string_list){
   
-  weight_words_1 <- c('gr','g.','g ','gs','gz','g','gm','gram','grams','gramme','oz','ounce','ounces','mg', 'kg','kilo')
-  conversion <- c(1,1,1,1,1,1,1,1,1,1,28.3495,28.3495,28.3495,1/1000,1000,1000)[order(nchar(weight_words_1),decreasing = TRUE)]
+  weight_words_1 <- c('g\'s','gr','g.','g ','gs','gz','g','gm','gram','grams','gramme','oz','ounce','ounces','mg', 'kg','kilo')
+  conversion <- c(1,1,1,1,1,1,1,1,1,1,1,28.3495,28.3495,28.3495,1/1000,1000,1000)[order(nchar(weight_words_1),decreasing = TRUE)]
   weight_words_1 <- weight_words_1[order(nchar(weight_words_1),decreasing = TRUE)]
   weight_words_sorted <- paste(weight_words_1,collapse = '|')
   
@@ -12,22 +12,34 @@ weight_from_string_list <- function(string_list){
     
     str <- tolower(str)
     
-    str <- sub('half','0.5',str)
-    str <- sub('full','1',str)
-    str <- sub('deux','2',str)
-    str <- sub('1 one','1',str)
-    str <- sub('1 single','1',str)
-    
-    replace_1 <- '[0-9]+\\s+[0-9]+'
-    find_replace <- strsplit(str_extract_all(str,replace_1)[[1]],' ')
-    for(num_temp in find_replace){
+    replace_1 <- '[0-9\\.]+\\s+[0-9\\.]+'
+    find_replace_1 <- strsplit(str_extract_all(str,replace_1)[[1]],' ')
+    for(num_temp in find_replace_1){
       if(length(num_temp)==2 & 
-         (sum(as.numeric(num_temp)<50)==2 |
+         (sum(as.numeric(num_temp)<50,na.rm=T)==2 |
           0 %in% num_temp)){
         str_temp_1 <- paste0(num_temp,collapse='.')
         str <- sub(str_temp_1,paste0(' ',str_temp_1),str)
       } 
     }
+    
+    if(FALSE){
+      replace_2 <- 'o\\s+[0-9]+'
+      find_replace_2 <-  strsplit(str_extract_all(str,replace_2)[[1]],' ')
+      for(num_temp in find_replace_2){
+        str_temp_2 <- paste0('0.',num_temp[2])
+      } 
+    }
+    
+    str <- sub('half','0.5',str)
+    str <- sub('full','1',str)
+    str <- sub('deux','2',str)
+    str <- sub('1 one','1',str)
+    str <- sub('1 single','1',str)
+    str <- sub('\\.\\.\\.','',sub('\\.\\.\\.','',str))
+    str <- sub('qtr','1/4',str)
+    str <- sub('eight','1/8',str)
+    str <- sub('8 ball','3.5 grams',str)
     
     weight_not_found <- TRUE
     while(weight_not_found){

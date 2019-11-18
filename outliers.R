@@ -1,7 +1,3 @@
-
-library(dplyr)
-
-df<-read.csv("bases_transformadas/info_total.csv", stringsAsFactors = F)
 outliers<-function(df)
 {
   
@@ -23,6 +19,11 @@ outliers<-function(df)
 
 
 if(FALSE){
+  
+  library(dplyr)
+  
+  df<-read.csv("bases_transformadas/info_total.csv", stringsAsFactors = F)
+  
 x=read.csv('C:/Users/Juan Jose/Dropbox/Deepweb/salidas_1_11/listing_summary_df_cocaine.csv')
 
 outliers=x%>%
