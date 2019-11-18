@@ -10,18 +10,17 @@ outliers<-function(df)
   df<- df %>% mutate(outlier_price_high=ifelse(is.finite(price_in_bit) & price_in_bit>=10, yes = 1,no = 0))
   df<- df %>% mutate(outlier_price_low=ifelse(is.finite(price_in_bit) & price_in_bit<=0.01, yes = 1,no = 0))
   
-  return(df)
+  no_weight<-df %>% filter(no_weight==1 )
+  outlier_price_high<-df %>% filter( outlier_price_high==1 )
+  outlier_price_low<-df %>% filter( outlier_price_low==1)
+  return_list<-list()
+ return_list[[1]]<-listings_summary(no_weight)
+ return_list[[2]]<-listings_summary(outlier_price_high)
+ return_list[[3]]<-listings_summary(outlier_price_low)
+  return(return_list)
 }
 
-df<-outliers(df)
 
-temp<-df %>% filter(no_weight==1 | outlier_price_high==1 | outlier_price_low==1)
-temp_a<-df %>% filter(no_weight==1 )
-summ_a<-listings_summary(temp_a)
-summ_b<-listings_summary(temp_b)
-sum_c<-listings_summary(temp_c)
-temp_b<-df %>% filter( outlier_price_high==1 )
-temp_c<-df %>% filter( outlier_price_low==1)
 
 if(FALSE){
 x=read.csv('C:/Users/Juan Jose/Dropbox/Deepweb/salidas_1_11/listing_summary_df_cocaine.csv')
