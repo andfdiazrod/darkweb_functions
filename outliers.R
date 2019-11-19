@@ -10,9 +10,11 @@ outliers<-function(df)
   outlier_price_high<-df %>% filter( outlier_price_high==1 )
   outlier_price_low<-df %>% filter( outlier_price_low==1)
   return_list<-list()
+  df_without_outliers<-df %>% filter(no_weight==0 & outlier_price_high==0 & outlier_price_low==0)
  return_list[[1]]<-listings_summary(no_weight)
  return_list[[2]]<-listings_summary(outlier_price_high)
  return_list[[3]]<-listings_summary(outlier_price_low)
+ return_list[[4]]<-df_without_outliers
   return(return_list)
 }
 
