@@ -44,12 +44,12 @@ shipping_from <- function(df){
           sim <- unlist(lapply(country_names,
                                function(x) levenshteinSim(s,x)))
           og_country <- country_names[which(sim == max(sim,na.rm=T) & sim > 0.6)]
+          country_list[,og_country] <- 0
           if(length(og_country) == 0){
             #print(paste(s, '//', unique(ship_from[cont])))
           }
           
         }
-        country_list[,og_country] <- 0
         country_list[cont,og_country] <- 1 
       }
     } else {
