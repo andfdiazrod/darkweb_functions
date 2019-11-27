@@ -39,7 +39,7 @@ shipping_from <- function(df){
           country_names <- tolower(codelist$cow.name)
           country_names <- c(country_names, 'worldwide', 'europe',
                              'south america','saint martin',
-                             'netherlands antilles','NA',
+                             'netherlands antilles','NA_',
                              'hong kong','vatican')
           sim <- unlist(lapply(country_names,
                                function(x) levenshteinSim(s,x)))
