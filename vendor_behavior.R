@@ -4,6 +4,7 @@ vendor_behavior <- function(df){
             "relative_consistency")
   vendor_consistency <- data.frame(matrix(ncol=length(columns)))
   colnames(vendor_consistency) <- columns
+  vendor_consistency$day_format <- as.Date(vendor_consistency$day_format)
   
   sum_up_to <- function(x){
     return(unlist(lapply(1:length(x),function(y) sum(x[1:y]))))
@@ -12,7 +13,7 @@ vendor_behavior <- function(df){
   for(vn in unique(df$vendor_name)){
     vn_day <- data.frame(day_format = unique(as.Date(info_total %>% 
                                                        filter(vendor_name == vn) %>% pull(day_format))),
-                         vendor_name=vn, appears = 1)
+                         appears = 1)
     vn_day_range <- read.csv('time_series.csv', stringsAsFactors = F)
     vn_day_range$day_format <- as.Date(vn_day_range$day_format)
     vn_day_range <- vn_day_range %>% 
@@ -23,12 +24,16 @@ vendor_behavior <- function(df){
   
     vn_day_range$consistency <- sum_up_to(vn_day_range$appears)
     vn_day_range$relative_consistency <- vn_day_range$consistency/(1:nrow(vn_day_range)) 
+    vn_day_range$vendor_name <- vn
     
     vendor_consistency <- rbind(vendor_consistency, vn_day_range)
   }
   return(vendor_consistency)
 }
 
-a = vendor_consistency %>% group_by(day_format) %>%  
-  summarise(a = mean(relative_consistency, na.rm=T))
-plot(a, type='l')
+if(FALSE){
+  a = vendor_consistency %>% group_by(day_format) %>%  
+    summarise(a = median(relative_consistency, na.rm=T))
+  plot(a, type='l')
+  b <- left_join(date_range,a,by='day_format')
+}
